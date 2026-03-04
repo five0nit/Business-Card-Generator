@@ -17,18 +17,18 @@ export function PreviewCanvas3D({ controls }: PreviewCanvas3DProps) {
       </div>
 
       <div
-        className="relative h-72 w-full overflow-hidden rounded-xl bg-gradient-to-b from-zinc-900 to-black"
+        className="relative h-[20rem] w-full overflow-hidden rounded-xl bg-gradient-to-b from-zinc-900 to-black md:h-[24rem]"
         style={{ perspective: `${perspective}px` }}
       >
         <div
-          className="absolute left-1/2 top-1/2 w-[320px] -translate-x-1/2 -translate-y-1/2"
+          className="absolute left-1/2 top-1/2 w-[92%] max-w-[560px] -translate-x-1/2 -translate-y-1/2"
           style={{
             transformStyle: "preserve-3d",
             transform: `translate(-50%, -50%) rotateX(${rotationX}deg) rotateZ(-8deg)`,
           }}
         >
           <div
-            className="relative h-[190px] w-[320px] rounded-xl border border-zinc-600 bg-zinc-100 text-zinc-900"
+            className="relative aspect-[1.59/1] w-full rounded-xl border border-zinc-600 bg-zinc-100 text-zinc-900"
             style={{ boxShadow: `0 ${depthVisual}px 24px rgba(0,0,0,0.45)` }}
           >
             <div className="absolute inset-0 p-5">
@@ -45,15 +45,15 @@ export function PreviewCanvas3D({ controls }: PreviewCanvas3DProps) {
                 Product Engineer
               </div>
 
-              <div className="mt-8 grid grid-cols-[18px_1fr] gap-x-3 gap-y-2">
+              <div className="mt-8 grid grid-cols-[30px_1fr] gap-x-3 gap-y-2.5">
                 {[
                   ["✉", "alex@brand.dev"],
                   ["☎", "+61 400 000 000"],
                   ["⌂", "sydney.brand.dev"],
                 ].map(([icon, text]) => (
                   <div key={`${icon}-${text}`} className="contents">
-                    <div style={{ fontSize: `${0.9 * controls.iconScale}rem` }}>{icon}</div>
-                    <div className="text-xs text-zinc-700">{text}</div>
+                    <div style={{ fontSize: `${1.35 * controls.iconScale}rem`, lineHeight: 1 }}>{icon}</div>
+                    <div className="text-sm text-zinc-700">{text}</div>
                   </div>
                 ))}
               </div>

@@ -32,7 +32,7 @@ function Slider({
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full accent-cyan-400"
+        className="h-8 w-full accent-cyan-400"
       />
     </label>
   );
@@ -52,8 +52,8 @@ export function DesignerShell() {
   );
 
   return (
-    <section className="mx-auto grid w-full max-w-6xl gap-6 px-4 py-8 md:grid-cols-[340px_1fr]">
-      <aside className="rounded-2xl border border-zinc-800 bg-zinc-900/70 p-5">
+    <section className="mx-auto grid w-full max-w-6xl gap-4 px-3 py-5 md:gap-6 md:px-4 md:py-8 md:grid-cols-[340px_1fr]">
+      <aside className="rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4 md:p-5">
         <h2 className="mb-1 text-lg font-semibold">Design Controls</h2>
         <p className="mb-6 text-sm text-zinc-400">Mono-PLA tuned controls (scaffold)</p>
 
